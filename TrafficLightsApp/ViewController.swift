@@ -6,7 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLightView: UIView!
     @IBOutlet weak var startButton: UIButton!
     
-    var counter = 0
+    private var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +22,14 @@ class ViewController: UIViewController {
             greenLightView.alpha = 0.3
             
             counter += 1
+            
+            startButton.setTitle("NEXT", for: .normal)
         case 1:
             redLightView.alpha = 0.3
             yellowLightView.alpha = 1
             greenLightView.alpha = 0.3
             
             counter += 1
-            
-            startButton.setTitle("NEXT", for: .normal)
         case 2:
             redLightView.alpha = 0.3
             yellowLightView.alpha = 0.3
